@@ -162,14 +162,6 @@ tear. Timing was verified in simulation and confirmed on-board on real hardware.
 Buttons are debounced in hardware and game state advances only on `frame_tick`,
 so no input is double-registered across a frame boundary.
 
-## Team
-
-Built by a team of four as part of an FPGA design course at Cal Poly Pomona.
-
-The initial `vga_sync` timing block was set up by a teammate. This repository's
-owner implemented the three game modules, the `arcade_top` integration and score
-mux, most of the testbenches in `sim/`, and the debugging and corrections to the
-VGA block that got it working on hardware.
 
 ## Notes
 
