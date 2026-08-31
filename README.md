@@ -136,10 +136,31 @@ launch_simulation
 
 ## Results
 
-- Meets its target clock frequency with **positive slack on all critical paths**.
-- Timing verified in simulation and confirmed on-board on real hardware.
-- Buttons are debounced in hardware; game state advances only on `frame_tick`,
-  so no input is double-registered across a frame boundary.
+Post-route timing on the 100 MHz board clock, all constraints met with zero
+failing endpoints:
+
+| Metric | Value |
+|---|---|
+| Worst negative slack (setup) | **+8.161 ns** |
+| Worst hold slack | **+0.440 ns** |
+| Worst pulse-width slack | **+4.500 ns** |
+| Failing endpoints | **0** of 2 |
+
+Resource usage on the XC7A100T — the design fits with room to spare, which is
+what makes adding a fourth game cheap:
+
+| Resource | Used | Available | % |
+|---|---|---|---|
+| Slice LUTs | 2,899 | 63,400 | 4.6% |
+| Slice registers | 1,579 | 126,800 | 1.2% |
+| Block RAM | 0 | 135 | 0% |
+| Bonded IOB | 37 | 210 | 17.6% |
+
+Zero block RAM is deliberate: every game renders procedurally from its state
+registers rather than from a framebuffer, so there is no frame memory to fill or
+tear. Timing was verified in simulation and confirmed on-board on real hardware.
+Buttons are debounced in hardware and game state advances only on `frame_tick`,
+so no input is double-registered across a frame boundary.
 
 ## Notes
 
