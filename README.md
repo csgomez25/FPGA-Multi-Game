@@ -166,6 +166,11 @@ so no input is double-registered across a frame boundary.
 
 Built by a team of four as part of an FPGA design course at Cal Poly Pomona.
 
+The initial `vga_sync` timing block was set up by a teammate. This repository's
+owner implemented the three game modules, the `arcade_top` integration and score
+mux, most of the testbenches in `sim/`, and the debugging and corrections to the
+VGA block that got it working on hardware.
+
 ## Notes
 
 `top_crossy.v` predates `arcade_top.v` — it was the single-game bring-up target used
