@@ -1,0 +1,44 @@
+# ---- Vivado generated output ----
+# Everything Vivado regenerates from rtl/ + constraints/ via scripts/create_project.tcl.
+# Nothing in here belongs in version control.
+
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+*.srcs/
+.Xil/
+*.jou
+*.log
+*.str
+*.wdb
+*.pb
+*.rpt
+*.dcp
+*.bit
+*.bin
+*.ltx
+*.mmi
+*.xpr
+*.xsa
+vivado*.backup.*
+webtalk*.jou
+webtalk*.log
+usage_statistics_webtalk*
+hs_err_pid*.log
+
+# ---- Simulation ----
+xsim.dir/
+*.vcd
+*.wcfg
+*.wdf
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
