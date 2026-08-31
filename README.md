@@ -5,7 +5,7 @@ A modular arcade system in Verilog for the Digilent Nexys A7-100T (Xilinx Artix-
 path; each game is a self-contained state machine that owns only its own logic and
 pixel colouring.
 
-Built for a digital design course, November–December 2025.
+Built by a team of four for a digital design course, November–December 2025.
 
 ## What it does
 
@@ -88,8 +88,8 @@ scripts/
 Requires Vivado 2025.1 or newer.
 
 ```bash
-git clone git@github.com:csgomez25/<repo>.git
-cd <repo>
+git clone git@github.com:csgomez25/FPGA-Multi-Game.git
+cd FPGA-Multi-Game
 vivado -mode batch -source scripts/create_project.tcl
 ```
 
@@ -161,6 +161,10 @@ registers rather than from a framebuffer, so there is no frame memory to fill or
 tear. Timing was verified in simulation and confirmed on-board on real hardware.
 Buttons are debounced in hardware and game state advances only on `frame_tick`,
 so no input is double-registered across a frame boundary.
+
+## Team
+
+Built by a team of four as part of an FPGA design course at Cal Poly Pomona.
 
 ## Notes
 
